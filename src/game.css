@@ -10,3 +10,10 @@
     background-color: green;
     position: absolute;
 }
+
+#gamesquare2{
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    position: absolute;
+}

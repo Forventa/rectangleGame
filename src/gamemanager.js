@@ -1,7 +1,8 @@
 let myint;
 
 
-const endRight = document.getElementById("mainsquare").offsetWidth - 50 + 10;
+const endRight = document.getElementById("mainsquare").offsetWidth - 50;
+const mainsquare = document.getElementById("mainsquare");
 
 rm = new resourcemanager;
 
@@ -52,6 +53,7 @@ class gamemanager{
             this.clearMovement();
             this.startMovementLeft(rect);
             rm.addGold(1);
+            
         }
 
         if(this.moveint < 1){
@@ -59,6 +61,7 @@ class gamemanager{
             this.clearMovement();
             this.startMovementRight(rect);
             rm.addGold(1);
+            
         }
     }
 

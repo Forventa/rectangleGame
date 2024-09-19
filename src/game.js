@@ -1,5 +1,7 @@
 const startbutton = document.getElementById("startbutton");
 const gamesquare1 = document.getElementById("gamesquare1");
+const gamesquare2 = document.getElementById("gamesquare2");
+const buybutton = document.getElementById("buynewsquare");
 
 gm = new gamemanager;
 rm = new resourcemanager;
@@ -11,6 +13,13 @@ startbutton.addEventListener("click", () =>{
     gm.startMovement(gamesquare1);
     bm.hideButton(startbutton);
 
+});
+
+
+buybutton.addEventListener("click", ()=>{
+    gm2 = new gamemanager;
+    gamesquare2.hidden = false;
+    gm2.startMovement(gamesquare2);
 });
 
 
