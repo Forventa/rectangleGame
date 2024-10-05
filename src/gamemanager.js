@@ -5,6 +5,7 @@ const endRight = document.getElementById("mainsquare").offsetWidth - 50;
 const mainsquare = document.getElementById("mainsquare");
 
 rm = new resourcemanager;
+um = new upgrademanager;
 
 class gamemanager{
 
@@ -28,7 +29,6 @@ class gamemanager{
 
 
 
-
     startMovement(rect){
         this.startMovementRight(rect);
     }
@@ -37,14 +37,14 @@ class gamemanager{
         this.myint = setInterval(() => {
             this.changeDirection(rect);
             this.moveRight(rect);
-        }, 10);
+        }, um.speed);
     }
 
     startMovementLeft(rect){
         this.myint = setInterval(() => {
             this.changeDirection(rect);
             this.moveLeft(rect);
-        }, 10);
+        }, um.speed);
     }
 
     changeDirection(rect){
@@ -52,7 +52,7 @@ class gamemanager{
             console.log("Changed dir");
             this.clearMovement();
             this.startMovementLeft(rect);
-            rm.addGold(1);
+            rm.addGold(um.income);
             
         }
 
@@ -60,7 +60,7 @@ class gamemanager{
             console.log("changed dir2");
             this.clearMovement();
             this.startMovementRight(rect);
-            rm.addGold(1);
+            rm.addGold(um.income);
             
         }
     }

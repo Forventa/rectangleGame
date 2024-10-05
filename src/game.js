@@ -22,7 +22,6 @@ startbutton.addEventListener("click", () =>{
 buybutton.addEventListener("click", ()=>{
     gamesquare2.hidden = false;
     gm2.startMovement(gamesquare2);
-    
 });
 
 
