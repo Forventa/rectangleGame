@@ -15,7 +15,6 @@ startbutton.addEventListener("click", () =>{
     //gm.moveRight(gamesquare1);
     gm.startMovement(gamesquare1);
     bm.hideButton(startbutton);
-
 });
 
 
